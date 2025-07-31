@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowYourLaw</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="file.svg" width="25" height="30" alt="Logo">
+                    <span>KnowYourLaw</span>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="logo">
+            KnowYourLaw
+        </div>
+        <div class="tagline">Get personalized legal guidance </div>
+        
+        <div class="input-section">
+            <label class="input-label" for="legalProblem">
+                Describe your situation:
+            </label>
+            <textarea 
+                id="legalProblem" 
+                class="problem-input" 
+                placeholder="Tell us about your issue..."
+                maxlength="1000"
+            ></textarea>
+            <div style="text-align: right; color: #999; font-size: 0.85em; margin-top: 5px;">
+                <span id="charCount">0</span>/1000 characters
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="analyzeIssue()">
+             Find Legal Help
+        </button>
+
+        <!-- <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="color: #666; margin-top: 10px;">Analyzing your legal issue...</p>
+        </div> -->
+
+        <div class="result-section" id="resultSection">
+            
+            <div class="result-content" id="resultContent">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+
+    </div>
+
+   
+</body>
+</html>

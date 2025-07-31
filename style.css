@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #bea1d6 0%, #010c1d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .nav-brand img {
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+    
+        /* Add margin to body to account for fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+       
+
+        .logo {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #000208 0%, #000000 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-family: Outfit;
+        }
+      
+
+        .tagline {
+            color: #000000;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: outfit;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+        }
+
+        .input-label {
+            display: block;
+            color: #928181;
+           
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: left;
+            font-family: outfit;
+            margin-left: 4px;
+            margin-bottom: 10px;
+        }
+
+        .problem-input {
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #6916ac34;
+            border-radius: 15px;
+            font-size: 16px;
+            min-height: 120px;
+        
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: #fafbfc;
+        }
+
+        .problem-input:focus {
+            outline: none;
+            border-color: #657de9;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .problem-input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            margin-top: 20px;
+            font-family: outfit;
+            
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 99, 26, 0.4);
+            color: #fffdfd;
+            
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 25px;
+                margin: 20px;
+            }
+
+            .logo {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .features {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .feature {
+                padding: 0;
+            }
+
+           
+
+            body {
+                padding-top: 80px;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            display: none;
+            margin: 20px 0;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
